@@ -18,11 +18,11 @@ module Twitter
     # Default URL base for auto-linked usernames
     DEFAULT_USERNAME_URL_BASE = "https://social2.zotsell.com/users/".freeze
     # Default URL base for auto-linked lists
-    DEFAULT_LIST_URL_BASE = "https://tsocial2.zotsell.com/users/".freeze
+    DEFAULT_LIST_URL_BASE = "https://social2.zotsell.com/users/".freeze
     # Default URL base for auto-linked hashtags
-    DEFAULT_HASHTAG_URL_BASE = "https://tsocial2.zotsell.com/search?q=%23".freeze
+    DEFAULT_HASHTAG_URL_BASE = "https://social2.zotsell.com/tags/%23".freeze
     # Default URL base for auto-linked cashtags
-    DEFAULT_CASHTAG_URL_BASE = "https://tsocial2.zotsell.com/search?q=%24".freeze
+    DEFAULT_CASHTAG_URL_BASE = "https://social2.zotsell.com/tags/%24".freeze
 
     # Default attributes for invisible span tag
     DEFAULT_INVISIBLE_TAG_ATTRS = "style='position:absolute;left:-9999px;'".freeze
