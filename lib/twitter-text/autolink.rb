@@ -16,13 +16,13 @@ module Twitter
     DEFAULT_CASHTAG_CLASS = "tweet-url cashtag".freeze
 
     # Default URL base for auto-linked usernames
-    DEFAULT_USERNAME_URL_BASE = "https://social2.zotsell.com/users/".freeze
+    DEFAULT_USERNAME_URL_BASE = "https://social.zotsell.com/users/".freeze
     # Default URL base for auto-linked lists
-    DEFAULT_LIST_URL_BASE = "https://social2.zotsell.com/users/".freeze
+    DEFAULT_LIST_URL_BASE = "https://social.zotsell.com/users/".freeze
     # Default URL base for auto-linked hashtags
-    DEFAULT_HASHTAG_URL_BASE = "https://social2.zotsell.com/tags/%23".freeze
+    DEFAULT_HASHTAG_URL_BASE = "https://social.zotsell.com/tags/%23".freeze
     # Default URL base for auto-linked cashtags
-    DEFAULT_CASHTAG_URL_BASE = "https://social2.zotsell.com/tags/%24".freeze
+    DEFAULT_CASHTAG_URL_BASE = "https://social.zotsell.com/tags/%24".freeze
 
     # Default attributes for invisible span tag
     DEFAULT_INVISIBLE_TAG_ATTRS = "style='position:absolute;left:-9999px;'".freeze
