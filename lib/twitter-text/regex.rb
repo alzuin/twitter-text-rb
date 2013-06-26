@@ -168,17 +168,17 @@ module Twitter
     # Used in Extractor for final filtering
     REGEXEN[:end_hashtag_match] = /\A(?:[#＃]|:\/\/)/o
 
-    REGEXEN[:valid_mention_preceding_chars] = /(?:[^a-zA-Z0-9_!#\$%&*@＠]|^|RT:?)/o
-    REGEXEN[:at_signs] = /[@＠]/
+    REGEXEN[:valid_mention_preceding_chars] = /\s+/o
+    REGEXEN[:email] = /([a-zA-Z0-9_]{1,20}[@＠][a-zA-Z0-9_]{1,20}\.[a-zA-Z0-9_\.]{1,20})/
     REGEXEN[:valid_mention_or_list] = /
       (#{REGEXEN[:valid_mention_preceding_chars]})  # $1: Preceeding character
-      (#{REGEXEN[:at_signs]})                       # $2: At mark
-      ([a-zA-Z0-9_]{1,20})                          # $3: Screen name
-      (\/[a-zA-Z][a-zA-Z0-9_\-]{0,24})?             # $4: List (optional)
+      (#{REGEXEN[:email]})                          # $2: At mark
+      (\/[a-zA-Z][a-zA-Z0-9_\-]{0,24})?             # $3: List (optional)
     /ox
-    REGEXEN[:valid_reply] = /^(?:#{REGEXEN[:spaces]})*#{REGEXEN[:at_signs]}([a-zA-Z0-9_]{1,20})/o
+    # REGEXEN[:valid_reply] = /^(?:#{REGEXEN[:spaces]})*{REGEXEN[:at_signs]}/o
+    REGEXEN[:valid_reply] = /^(?:#{REGEXEN[:spaces]})*{REGEXEN[:email]}/o
     # Used in Extractor for final filtering
-    REGEXEN[:end_mention_match] = /\A(?:#{REGEXEN[:at_signs]}|#{REGEXEN[:latin_accents]}|:\/\/)/o
+    REGEXEN[:end_mention_match] = /\A(?:#{REGEXEN[:email]}|#{REGEXEN[:latin_accents]}|:\/\/)/o
 
     # URL related hash regex collection
     REGEXEN[:valid_url_preceding_chars] = /(?:[^A-Z0-9@＠$#＃#{INVALID_CHARACTERS.join('')}]|^)/io
